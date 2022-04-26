@@ -1,0 +1,42 @@
+<template>
+    <dashboard-body-title body-title="Companies" loading.bind="loading"></dashboard-body-title>
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>Company List</h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <no-data if.bind="!hasItems" resource-name="Company" redirect-path="#/company/--new"></no-data>
+
+                <div class="table-responsive" if.bind="hasItems">
+                  <table class="table table-hover table-condensed" aurelia-table="data.bind: list; display-data.bind: $displayData;">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th aut-sort="key: Name; default: asc">Name</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr repeat.for="item of $displayData">
+                        <td>${$index + 1}</td>
+                        <td>${item.Name}</td>
+                        <td class="text"><span>${item.Address}</span></td>
+                        <td>
+                          <a class="btn btn-default btn-xs table-action-btn" route-href="route: companyDetail; params.bind: {id:item.Id}" title="Edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                          <button class="btn btn-default btn-xs table-action-btn" title="Delete" click.trigger="delete(item.Id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>      
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <confirm-modal id.bind="deleteModalId" heading.bind="deleteHeading"></confirm-modal>
+</template>

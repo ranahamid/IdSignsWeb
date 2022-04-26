@@ -1,0 +1,21 @@
+<template bindable="currentPage, pageSize, totalItems">
+  <div class="row">
+    <div class="col-md-9">
+      <aut-pagination current-page.bind="currentPage" page-size.bind="pageSize" total-items.bind="totalItems" pagination-size.bind="5"
+        boundary-links.bind="true" hide-single-page="true"> </aut-pagination>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-inline">
+        <div class="form-group pull-right">
+          <label for="pageSize">Page Size: </label>
+          <select value.bind="pageSize" id="pageSize" class="form-control">
+            <option model.bind="10">10</option>
+            <option model.bind="30">30</option>
+            <option model.bind="50">50</option>
+            <option model.bind="100">100</option>
+          </select>
+      </div>
+    </div>
+  </div>
+</template>

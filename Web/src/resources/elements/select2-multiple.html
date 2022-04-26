@@ -1,0 +1,11 @@
+<template>
+  <select value.two-way="selected" class="form-control" name.one-way="name" id.one-way="name" class="form-control" multiple data-placeholder.one-way="placeholder" data-allow-clear.one-way="allow_clear" data-maximum-selection-length.one-way="max_item" size="1" data-tags.one-way="tags">
+    <!-- without group -->
+    <option if.one-time="!with_group" repeat.for="option of options" value.bind="option.id">${option.name}</option>
+    
+    <!-- with group -->
+    <optgroup if.one-time="with_group" repeat.for="items of options" label="${items.group_name}">
+      <option repeat.for="option of items.options" value.bind="option.id">${option.name}</option>
+    </optgroup>
+  </select>
+</template>

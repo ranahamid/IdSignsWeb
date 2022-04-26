@@ -1,0 +1,1 @@
+import {ResendEmail} from 'dashboard/config/entity/resend-email';

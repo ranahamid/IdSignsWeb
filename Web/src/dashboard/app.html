@@ -1,0 +1,20 @@
+<template>    
+	<require from="dashboard/template/sidebar"></require>
+	<require from="dashboard/template/topbar"></require>
+	<require from="dashboard/template/custom-footer.html"></require>
+
+	<div class="container body">
+      <div class="main_container">
+				<sidebar></sidebar>
+				<topbar></topbar>
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+						<router-view></router-view> 
+        </div>
+        <!-- /page content -->
+
+        <custome-footer></custome-footer>
+      </div>
+    </div>
+</template>

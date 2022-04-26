@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Core</name>
+    </assembly>
+    <members>
+        <member name="T:Core.AppConstants">
+            <summary>
+            AppConstants
+            </summary>
+        </member>
+        <member name="F:Core.AppConstants.NewId">
+            <summary>
+            Indicates a new entry should be returned;
+            </summary>
+        </member>
+        <member name="F:Core.AppConstants.BucketNameStart">
+            <summary>
+            BucketNameStart
+            </summary>
+        </member>
+        <member name="F:Core.AppConstants.CorsOriginsSettingKey">
+            <summary>
+            CorsOriginsSettingKey
+            </summary>
+        </member>
+        <member name="F:Core.AppConstants.NoUserImageUrl">
+            <summary>
+            NoUserImageUrl
+            </summary>
+        </member>
+        <member name="T:Core.MessageConstants">
+            <summary>
+            MessageConstants
+            </summary>
+        </member>
+        <member name="F:Core.MessageConstants.UnhandledError">
+            <summary>
+            UnhandledError
+            </summary>
+        </member>
+        <member name="F:Core.MessageConstants.UnSupportedMediaType">
+            <summary>
+            UnSupportedMediaType
+            </summary>
+        </member>
+        <member name="F:Core.MessageConstants.S3FileDoesNotExists">
+            <summary>
+            S3FileDoesNotExists
+            </summary>
+        </member>
+        <member name="F:Core.MessageConstants.ItemDoesNotExists">
+            <summary>
+            ItemDoesNotExists
+            </summary>
+        </member>
+        <member name="F:Core.MessageConstants.ProviderBucketDoesNotExists">
+            <summary>
+            ProviderBucketDoesNotExists
+            </summary>
+        </member>
+        <member name="F:Core.MessageConstants.ProviderBucketExists">
+            <summary>
+            ProviderBucketExists
+            </summary>
+        </member>
+        <member name="T:Core.DTOs.SelectOptionModel">
+            <summary>
+            SelectOptionModel
+            </summary>
+        </member>
+        <member name="P:Core.DTOs.SelectOptionModel.id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:Core.DTOs.SelectOptionModel.name">
+            <summary>
+            name
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Core.Entities.BaseEntity" -->
+        <member name="P:Core.Entities.BaseEntity.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:Core.Entities.Channel">
+            <summary>
+            Channel
+            </summary>
+        </member>
+        <member name="M:Core.Entities.Channel.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Channel.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Channel.CompanyId">
+            <summary>
+            Company <see cref="P:Core.Entities.Channel.Company"/> Id
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Channel.CreatedAt">
+            <summary>
+            Created At
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Channel.CreatedBy">
+            <summary>
+            Created By
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Channel.Company">
+            <summary>
+            Foreign Key Company
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Channel.Predictions">
+            <summary>
+            Reference Key Prediction
+            </summary>
+        </member>
+        <member name="T:Core.Entities.Company">
+            <summary>
+            Company
+            </summary>
+        </member>
+        <member name="M:Core.Entities.Company.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Company.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Company.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Company.CreatedAt">
+            <summary>
+            Created At
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Company.CreatedBy">
+            <summary>
+            Crated By
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Company.Channels">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Company.Users">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Core.Entities.Identity.ApplicationUser">
+            <summary>
+            ApplicationUser
+            </summary>
+        </member>
+        <member name="M:Core.Entities.Identity.ApplicationUser.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Identity.ApplicationUser.CreatedAt">
+            <summary>
+            CreatedAt
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Identity.ApplicationUser.CompanyId">
+            <summary>
+            Company <see cref="P:Core.Entities.Identity.ApplicationUser.Company"/> Id
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Identity.ApplicationUser.Company">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Core.Entities.Identity.ApplicationUser.GenerateUserIdentityAsync(Microsoft.AspNet.Identity.UserManager{Core.Entities.Identity.ApplicationUser},System.String)">
+            <summary>
+            GenerateUserIdentityAsync
+            </summary>
+            <param name="manager">ApplicationUser instance</param>
+            <param name="authenticationType">Type of authentication</param>
+            <returns></returns>
+        </member>
+        <member name="T:Core.Entities.Prediction">
+            <summary>
+            Entity for storing Prediction output from YOLO
+            </summary>
+        </member>
+        <member name="M:Core.Entities.Prediction.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Prediction.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Prediction.ChannelId">
+            <summary>
+            Channel <see cref="P:Core.Entities.Prediction.Channel"/> Id
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Prediction.Accuracy">
+            <summary>
+            Accuracy of Prediction
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Prediction.CreatedAt">
+            <summary>
+            Created At
+            </summary>
+        </member>
+        <member name="P:Core.Entities.Prediction.Channel">
+            <summary>
+            Foreign Key Table
+            </summary>
+        </member>
+        <member name="T:Core.Exceptions.FormattedDbEntityValidationException">
+            <summary>
+            FormattedDbEntityValidationException
+            </summary>
+        </member>
+        <member name="M:Core.Exceptions.FormattedDbEntityValidationException.#ctor(System.Data.Entity.Validation.DbEntityValidationException)">
+            <summary>
+            
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="P:Core.Exceptions.FormattedDbEntityValidationException.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Core.Interfaces.IAppLogger`1">
+            <summary>
+            This type eliminates the need to depend directly on the ASP.NET Core logging types.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Core.Interfaces.Repositories.IChannelRepository">
+            <summary>
+            IChannelRepository
+            </summary>
+        </member>
+        <member name="T:Core.Interfaces.Repositories.ICompanyRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Core.Interfaces.Repositories.IPredictionRepository">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,11 @@
+<template bindable="acceptedType, selectedFiles">
+    <require from="resources/value-converters/files-to-array"></require>
+    <require from="resources/value-converters/blob-to-url"></require>
+
+    <input type="file" multiple accept.bind="acceptedType" files.bind="selectedFiles">
+    <div class="center-block img-preview">
+        <div repeat.for="file of selectedFiles | filesToArray">
+            <img src.bind="file | blobToUrl" alt="" class="img-responsive img-rounded" style="width: 140px; height: 140px">
+        </div>
+    </div>
+</template>

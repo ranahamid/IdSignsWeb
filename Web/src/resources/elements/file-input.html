@@ -1,0 +1,18 @@
+<template bindable="acceptedType, selectedFiles, showRemoveButton">
+    <require from="resources/value-converters/files-to-array"></require>
+    <require from="resources/value-converters/blob-to-url"></require>
+
+    <input type="file" accept.bind="acceptedType" id="file-element" files.bind="selectedFiles" style="display: none">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="File name" disabled>
+        <span class="input-group-btn">
+            <button class="btn btn-default" id="btn-upload" type="button">Upload image</button>
+            <button class="btn btn-default" id="btn-remove-image" type="button" if.bind="showRemoveButton">Remove image</button>
+        </span>
+    </div><!-- /input-group -->
+    <div class="center-block file-input-preview">
+        <div class="thumbnail" repeat.for="file of selectedFiles | filesToArray">
+            <img src.bind="file | blobToUrl" alt="" class="img-responsive img-rounded" id="preview-image">
+        </div>
+    </div>
+</template>

@@ -1,0 +1,44 @@
+<template>
+  <require from="home/template/nav-bar-empty.html"></require>
+
+  <nav-bar-empty></nav-bar-empty>
+
+  <div class="login_wrapper">
+    <div class="animate form login_form">
+      <section class="login_content">
+        <form submit.delegate="submit()">
+          <h1>Login to App</h1>
+
+          <div class="form-group">
+            <label class="sr-only" for="username">Username</label>
+            <input type="text" class="form-control" placeholder="Username" value.bind="username & validate">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="password">Password</label>
+            <input type="password" class="form-control" placeholder="Password" value.bind="password & validate">
+          </div>
+          <div>
+            <button type="submit" class="btn btn-default">Log in</button>
+            <a class="reset_pass" href="#/forgot">Lost your password?</a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <div class="eatsy-separator">
+            <p class="change_link">New to site?
+              <a href="#register" class="to_register"> Create Account </a>
+            </p>
+
+            <div class="clearfix"></div>
+            <br>
+
+            <div>
+              <h1><a href="/"><img src="../../Images/eatsy-logo.png" alt="Eatsy"></a></h1>
+              <p>©2017 All Rights Reserved.</p>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</template>

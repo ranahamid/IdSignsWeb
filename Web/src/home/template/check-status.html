@@ -1,0 +1,35 @@
+<template>  
+  <require from="animate.css/animate.css"></require>
+  <require from="../../../Content/custom-input.css"></require>
+
+  <div class="modal animated bounceInUp" id="checkStatus" tabindex="-1" role="dialog" aria-labelledby="checkStatusLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+       <div class="modal-header">
+         <div class="container">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>              
+          <h4 class="modal-title" id="checkStatusLabel"><img src="../../../Images/logo.svg" /></h4>
+         </div>          
+        </div>
+        <div class="modal-body">
+          <div class="container check-status">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="text-xxl">Take the first step to Eatsy.</p>
+              </div>
+
+              <div class="col-md-6 custom-input">
+                <form submit.delegate="submit()">                  
+                  <h5>Get Early Access</h5>
+                  <input type="text" placeholder="you@example.com" value.bind="email & validate">                
+                  <button class="primary-btn">CHECK STATUS</button>
+                  <p class="text-small">* <a href="#/${viewBy}/faq">See FAQ</a> for more details.</p>  
+                </form>                
+              </div>
+            </div>
+          </div>          
+        </div>      
+      </div>
+    </div>
+  </div>
+</template>
